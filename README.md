@@ -4,7 +4,7 @@ Python のモダンなパッケージマネージャー uv の学習用リポジ
 
 ## 1. uvのインストール（Mac・M1）
 
-以下のコマンドを実行
+以下のコマンドを実行。
 
 ```bash
 # Homebrew を使ったインストール
@@ -22,7 +22,7 @@ uv 0.9.22 (Homebrew 2026-01-06)
 
 ## 2. uvで新規Pythonプロジェクトを作成
 
-以下のコマンドを実行
+以下のコマンドを実行。
 
 ```bash
 uv init
@@ -46,7 +46,7 @@ Initialized project `uv-python-sample`
 
 ## 3. Pythonのバージョンをプロジェクト単位で指定
 
-pyproject.tomlのバージョンを 3.11 に変更
+pyproject.tomlのバージョンを 3.11 に変更。
 
 ```toml
 [project]
@@ -65,7 +65,7 @@ uv python pin 3.11
 Updated `.python-version` from `3.9.6` -> `3.11`
 ```
 
-## 4.uv のみを使用して Hello World を実行
+## 4. uv のみを使用して Hello World を実行
 
 実行コマンド
 
@@ -81,9 +81,9 @@ Creating virtual environment at: .venv
 Hello World
 ```
 
-## 5：依存ライブラリをプロジェクト毎に管理
+## 5. 依存ライブラリをプロジェクトごとに管理
 
-依存管理の例として、HTTP 通信を行うための外部ライブラリである requests を追加
+依存管理の例として、HTTP 通信を行うための外部ライブラリである requests を追加。
 
 ```bash
 uv add requests
@@ -99,4 +99,20 @@ Installed 5 packages in 33ms
  + idna==3.11
  + requests==2.32.5
  + urllib3==2.6.3
+```
+
+pyproject.toml は uv add コマンドにより自動更新され、
+依存関係の解決結果は uv.lock に記録される。
+
+main.py を編集し、Hello World の出力と requests を用いた HTTP リクエストの実行を確認。
+
+```bash
+uv run python main.py
+```
+
+実行結果
+
+```text
+Hello World
+HTTP request succeeded: 200
 ```
