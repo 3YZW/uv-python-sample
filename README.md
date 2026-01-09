@@ -80,3 +80,23 @@ Using CPython 3.11.14
 Creating virtual environment at: .venv
 Hello World
 ```
+
+## 5：依存ライブラリをプロジェクト毎に管理
+
+依存管理の例として、HTTP 通信を行うための外部ライブラリである requests を追加
+
+```bash
+uv add requests
+```
+
+実行結果
+
+```text
+Resolved 6 packages in 248ms
+Installed 5 packages in 33ms
+ + certifi==2026.1.4
+ + charset-normalizer==3.4.4
+ + idna==3.11
+ + requests==2.32.5
+ + urllib3==2.6.3
+```
