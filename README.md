@@ -22,6 +22,8 @@ uv 0.9.22 (Homebrew 2026-01-06)
 
 ## 2. uvで新規Pythonプロジェクトを作成
 
+以下のコマンドを実行
+
 ```bash
 uv init
 ```
@@ -40,4 +42,25 @@ Initialized project `uv-python-sample`
 ├── README.md
 ├── .python-version
 └── main.py
+```
+
+## 3. Pythonのバージョンをプロジェクト単位で指定
+
+pyproject.tomlのバージョンを 3.11 に変更
+
+```toml
+[project]
+requires-python = ">=3.11"
+```
+
+`uv python pin` を使用し、プロジェクトごとに使用する Python バージョンを固定。
+
+```bash
+uv python pin 3.11
+```
+
+実行結果
+
+```text
+Updated `.python-version` from `3.9.6` -> `3.11`
 ```
