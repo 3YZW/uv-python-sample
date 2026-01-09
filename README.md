@@ -64,3 +64,19 @@ uv python pin 3.11
 ```text
 Updated `.python-version` from `3.9.6` -> `3.11`
 ```
+
+## 4.uv のみを使用して Hello World を実行
+
+実行コマンド
+
+```bash
+uv run python main.py
+```
+
+実行結果
+
+```text
+Using CPython 3.11.14
+Creating virtual environment at: .venv
+Hello World
+```
